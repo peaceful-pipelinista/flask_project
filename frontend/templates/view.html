@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>View Data</title>
+    <style>
+      <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </style>
+  </head>
+  <body>
+    <h2>All Signup Data</h2>
+
+    {% for user in users %}
+    <p>
+      Username: {{ user.username }} <br />
+      Email: {{ user.email }}
+    </p>
+    <hr />
+    {% endfor %}
+  </body>
+</html>
